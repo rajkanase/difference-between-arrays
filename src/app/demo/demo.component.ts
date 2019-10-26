@@ -8,23 +8,19 @@ import * as _ from "lodash";
 })
 export class DemoComponent implements OnInit {
   bigArray = [
-    { id: 1, name: "rajkumar", city: "pune" },
-    { id: 2, name: "vaibhav", city: "mumbai" },
-    { id: 3, name: "vaibhavnerle", city: "kolhapur" },
-    { id: 4, name: "omkar", city: "junnar" },
-    { id: 5, name: "hrishikesh", city: "narhe" },
-    { id: 6, name: "shraddha", city: "ghatkopar" },
-    { id: 7, name: "ishwari", city: "rajuri" },
-    { id: 8, name: "pradnya", city: "moshi" },
-    { id: 9, name: "pooja", city: "bhorwadi" },
-    { id: 10, name: "amar", city: "delhi" }
+    { id: 1, name: "Angular" },
+    { id: 2, name: "Node Js" },
+    { id: 3, name: "Java" },
+    { id: 4, name: "Javascript" },
+    { id: 5, name: "Spring Boot" },
+    { id: 6, name: "Ionic" },
+    { id: 7, name: "HTML" },
+    { id: 8, name: "CSS" },
+    { id: 9, name: "Bootstrap" },
+    { id: 10, name: "Mongo" }
   ];
 
-  smallArray = [
-    { id: 1, name: "rajkumar", city: "pune" },
-    { id: 2, name: "vaibhav", city: "mumbai" },
-    { id: 3, name: "vaibhavnerle", city: "kolhapur" }
-  ];
+  smallArray = [];
 
   finalArray = [];
   constructor() {
@@ -34,6 +30,12 @@ export class DemoComponent implements OnInit {
       _.isEqual
     );
     console.log(this.finalArray);
+  }
+
+  onSelectChange(id) {
+    let temp = this.finalArray.find(e => e.id == id);
+    this.smallArray.push(temp);
+    
   }
 
   ngOnInit() {}

@@ -1,1 +1,37 @@
-Hi
+<h1>
+	Skill Management
+</h1>
+
+<div>
+	<p>
+		<label for="sk1">Select Skill 1 - </label>
+	</p>
+</div>
+<div>
+	<select id="sk1" (change)="onSelectChange($event.target.value)">
+    <option *ngFor="let item of finalArray" [value]="item.id">{{item.name}}</option>
+  </select>
+</div>
+
+<div>
+	<p>
+		<label for="sk2">Select Skill 2 - </label>
+	</p>
+</div>
+<div>
+	<select id="sk2" (change)="onSelectChange($event.target.value)">
+    <option *ngFor="let item of finalArray">{{item.name}}</option>
+  </select>
+</div>
+
+
+<div>
+	<p>
+		<label for="sk3">Select Skill 3 - </label>
+	</p>
+</div>
+<div>
+	<select id="sk3" (change)="onSelectChange($event.target.value)">
+    <option *ngFor="let item of finalArray">{{item.name}}</option>
+  </select>
+</div>
